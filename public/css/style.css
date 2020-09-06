@@ -224,7 +224,7 @@ body {
     .container {
         margin: 0;
         overflow: hidden;
-        grid-template-rows: 10vh 65vh 10vh;
+        grid-template-rows: 10vh 80vh 10vh;
     }
     .header .menu-bar {
         display: flex;
