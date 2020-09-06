@@ -159,6 +159,6 @@ body {
 /* Media */
 @media (max-width: 600px) {
     .container{
-        margin: 5rem 5rem 0rem 5rem;
+        padding: 5rem 5rem 0rem 5rem;
     }
 }
