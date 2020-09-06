@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>ChatRoom APP</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>ChatRoom</h2>
+        </div>
+        <form action="chat.html">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" placeholder="Username..." id="username" name="username" required/>
+            </div>
+            <div class="form-control">
+                <label for="room">Room</label>
+                <select name="room" id="room">
+                    <option value="Hacker">Hacker</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Designer">Designer</option>
+                    <option value="Tester">Tester</option>
+                </select>
+            </div>
+            <button class="btn" type="submit">Join Chat Room</button>
+        </form>
+    </div>
+    
+</body>
+
+</html>

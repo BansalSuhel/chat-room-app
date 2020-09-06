@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ChatRoom App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <span class="menu-bar" onclick="opensideBar()">&#9776;</span>
+            </div>
+            <h1>ChatRoom</h1>
+            <a href="index.html" class="header-btn">Leave Room</a>
+        </div>
+        <div class="sidebar">
+            <h3 class="room-name"><i class="fas fa-comments"></i> Room Name:</h3>
+            <h3 id="room"></h3>
+            <h3 class="users"><i class="fas fa-users"></i> Users:</h3>
+            <ul id="users">
+                <!-- <li>Bansal</li>
+                <li>suhel</li>
+                <li>Tannu</li> -->
+            </ul>
+        </div>
+        <div class="sidebar-mobile-view" id="sidebar-mobile-view">
+            <a href="#" class="close-btn" onclick="closesideBar()">&times;</a>
+            <h3 class="room-name center pd-top-lg"><i class="fas fa-comments"></i> Room Name:</h3>
+            <h3 id="room-mobile"></h3>
+            <h3 class="users center"><i class="fas fa-users"></i> Users:</h3>
+            <ul id="users-mobile" class="center">
+                <!-- <li>Bansal</li>
+                <li>suhel</li>
+                <li>Tannu</li> -->
+            </ul>
+        </div>
+        <div class="message-box">
+            <!-- <div class="chat-messages">
+                <p class="chat-messages__user">Suhel<span>9:50AM</span></p>
+                <p class="chat-messages__message">Hey this is mesg</p>
+            </div>
+            <div class="chat-messages">
+                <p class="chat-messages__user">Suhel<span>9:50PM</span></p>
+                <p>Hey this is mesg</p>
+            </div> -->
+        </div>
+        <div class="footer">
+            <form action="" id="form">
+                <input type="text" placeholder="Enter Message" id="msg" required/>
+                <button type="submit"><i class="fas fa-paper-plane"></i>Send</button>
+            </form>
+        </div>
+    </div>
+    <!-- FontAwesome Cdn -->
+    <script src="https://kit.fontawesome.com/c00ab4c5da.js" crossorigin="anonymous"></script>
+    <!-- Query String cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+        integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4=" crossorigin="anonymous"></script>
+    <!-- socket client library  -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- client.js file -->
+    <script src="./js/client.js"></script>
+    <script>
+        const opensideBar = () => {
+            document.getElementById("sidebar-mobile-view").style.width = "25rem"
+            
+        }
+        const closesideBar = () => {
+            document.getElementById("sidebar-mobile-view").style.width = "0"
+           
+        }
+    </script>
+</body>
+
+</html>

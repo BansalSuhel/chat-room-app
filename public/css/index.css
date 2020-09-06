@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+
+:root {
+    --font-display-main: 'Noto Sans JP', sans-serif;
+    --font-display-second: 'Roboto' sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html { 
+    font-size: 62.5%; /* 1rem =10px; */
+    box-sizing: border-box;
+}
+
+body { 
+   font-family: var(--font-display-main);
+   font-weight: 300;
+   line-height: 1.6;
+   background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+   background-size: cover;
+   background-repeat: no-repeat;
+   min-height: calc(100vh - 5rem);
+}
+
+.container {
+    max-width: 50rem;
+    margin: 5rem auto;
+}
+
+.header {
+    margin-bottom: 3rem;
+    animation: topToBottom 1s ease-in-out;
+}
+
+.header h2 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control label {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: leftToRight 1s ease-in-out;
+}
+
+.form-control #username {
+    margin-bottom: 2.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    border-radius: 10rem;
+    border: none;
+    animation: rightToLeft 1s ease-in-out;
+}
+
+.form-control #username:focus {
+    outline: none;
+}
+
+.form-control select {
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: none;
+    animation: rightToLeft 1s ease-in-out;
+}
+
+.form-control select:focus {
+    outline: none;
+}
+
+.btn {
+    margin-top: 7rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    background: linear-gradient(to right, #8e0e00, #1f1c18);
+    background-size: cover;
+    border: none;
+    transition: all .4s;
+    color: #fff;
+    animation: bottomToTop 1s ease-in-out;
+}
+
+.btn:hover {
+    background: linear-gradient(to left, #8e0e00, #1f1c18);
+}
+
+/* Animations */
+
+@keyframes topToBottom {
+    0%{
+     opacity: 0;
+     transform: translateY(-30rem);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes bottomToTop {
+    0%{
+     opacity: 0;
+     transform: translateY(30rem);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes leftToRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80%{
+      transform: translateX(3rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes rightToLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80%{
+      transform: translateX(-3rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Media */
+@media (max-width: 600px) {
+    .container{
+        margin: 5rem 5rem;       
+    }
+}
