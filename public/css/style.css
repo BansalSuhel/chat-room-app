@@ -223,8 +223,8 @@ body {
 @media (max-width: 800px) {
     .container {
         margin: 0;
-       
-        grid-template-rows: 10vh 80vh 10vh;
+        overflow: hidden;
+        grid-template-rows: 10vh 65vh 10vh;
     }
     .header .menu-bar {
         display: flex;
