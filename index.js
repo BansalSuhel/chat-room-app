@@ -20,6 +20,10 @@ const server = http.createServer(app);
 //serving static files
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname + "/public" + "/index.html"));
+});
+
 const io = socket(server);
 
 const chatBot = 'ChatBot';
