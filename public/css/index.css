@@ -17,6 +17,7 @@
 html { 
     font-size: 62.5%; /* 1rem =10px; */
     box-sizing: border-box;
+    height: 100%;
 }
 
 body { 
@@ -26,8 +27,7 @@ body {
    background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
    background-size: cover;
    background-repeat: no-repeat;
-   /* min-height: calc(100vh - 5rem); */
-   min-height: 100vh;
+   height: 100%;
    overflow: hidden;
 }
 

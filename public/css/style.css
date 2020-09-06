@@ -221,10 +221,17 @@ body {
 }
 
 @media (max-width: 800px) {
+    html {
+        height: 100%;
+    }
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
     .container {
         margin: 0;
-        overflow: hidden;
-        grid-template-rows: 10vh 80vh 10vh;
+        height: 100%;
+        grid-template-rows: 10% 80% 10%;
     }
     .header .menu-bar {
         display: flex;
